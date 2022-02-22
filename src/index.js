@@ -1,92 +1,53 @@
 // index.js
 import React from "react";
 import ReactDOM from "react-dom";
-import asabenehImage from "./images/asabeneh.jpg";
-// To get the root element from the HTML document
+import htmlImage from "./images/html_logo.png";
+import cssImage from "./images/css_logo.png";
+import jsImage from "./images/js_logo.png";
+import reactImage from "./images/react_logo.png";
 
-// JSX element, header
-const welcome = "Welcome to 30 Days Of React";
-const title = "Getting Started React";
-const subtitle = "JavaScript Library";
-const author = {
-  firstName: "Asabeneh",
-  lastName: "Yetayeh",
-};
-const date = "Oct 2, 2020";
+//ex2.1
 
-// JSX element, header
-const header = (
-  <header>
-    <div className="header-wrapper">
-      <h1>{welcome}</h1>
-      <h2>{title}</h2>
-      <h3>{subtitle}</h3>
-      <p>
-        Instructor: {author.firstName} {author.lastName}
-      </p>
-      <small>Date: {date}</small>
-    </div>
-  </header>
-);
+// const main = "Front End Technologies";
+// const imagesAr = [htmlImage, cssImage, jsImage, reactImage];
 
-const yearBorn = 1820;
-const currentYear = new Date().getFullYear();
-const age = currentYear - yearBorn;
-const personAge = (
-  <p>
-    {" "}
-    {author.firstName} {author.lastName} is {age} years old
-  </p>
-);
+// const header = (
+//   <header>
+//     <div className="header-wrapper">
+//       <h2>{main}</h2>
+//     </div>
+//     <div className="img-wrapper">
+//       {imagesAr.map((img, index) => (
+//         <img src={img} key={index} alt={`${img}`} />
+//       ))}
+//     </div>
+//   </header>
+// );
+// // JSX element, app
+// const app = <div className="app">{header}</div>;
 
-// JSX element, main
-const techs = ["HTML", "CSS", "JavaScript"];
-const techsFormatted = techs.map((tech) => <li>{tech}</li>);
+// ex2.2
 
-const user = (
-  <div>
-    <img src={asabenehImage} alt="asabeneh img" />
-  </div>
-);
+const title = "SUBSCRIBE";
+const info = "Sign up with your email address to receive news and updates";
 
-// JSX element, main
 const main = (
   <main>
-    <div className="main-wrapper">
-      <p>
-        Prerequisite to get started{" "}
-        <strong>
-          <em>react.js</em>
-        </strong>
-        :
-      </p>
-      <ul>{techsFormatted}</ul>
-
-      {personAge}
-      {user}
+    <div className="header-wrapper">
+      <h1>{title}</h1>
+      <p>{info}</p>
+    </div>
+    <div className="form-wrapper">
+      <input placeholder="First name"></input>
+      <input placeholder="Last name"></input>
+      <input placeholder="Email"></input>
+      <button>Subscribe</button>
     </div>
   </main>
 );
 
-const copyRight = "Copyright 2020";
-
-// JSX element, footer
-const footer = (
-  <footer>
-    <div className="footer-wrapper">
-      <p>{copyRight}</p>
-    </div>
-  </footer>
-);
-
 // JSX element, app
-const app = (
-  <div className="app">
-    {header}
-    {main}
-    {footer}
-  </div>
-);
+const app = <div className="app">{main}</div>;
 
 const rootElement = document.getElementById("root");
 // we render the JSX element using the ReactDOM package
