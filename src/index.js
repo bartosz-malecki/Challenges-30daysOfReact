@@ -9,29 +9,38 @@ import reactImage from "./images/react_logo.png";
 //ex2.1
 
 // const main = "Front End Technologies";
-// const imagesAr = [htmlImage, cssImage, jsImage, reactImage];
+// const Images = () => {
+//   const imagesAr = [htmlImage, cssImage, jsImage, reactImage];
+//   const im = imagesAr.map((img, index) => (
+//     <img src={img} key={index} alt={`${img}`} />
+//   ));
+//   return im;
+// };
 
-// const header = (
+// const Header = () => (
 //   <header>
 //     <div className="header-wrapper">
 //       <h2>{main}</h2>
 //     </div>
 //     <div className="img-wrapper">
-//       {imagesAr.map((img, index) => (
-//         <img src={img} key={index} alt={`${img}`} />
-//       ))}
+//       <Images />
 //     </div>
 //   </header>
 // );
+
 // // JSX element, app
-// const app = <div className="app">{header}</div>;
+// const app = (
+//   <div className="app">
+//     <Header />
+//   </div>
+// );
 
 // ex2.2
 
 const title = "SUBSCRIBE";
 const info = "Sign up with your email address to receive news and updates";
 
-const main = (
+const Main = () => (
   <main>
     <div className="header-wrapper">
       <h1>{title}</h1>
@@ -41,13 +50,17 @@ const main = (
       <input placeholder="First name"></input>
       <input placeholder="Last name"></input>
       <input placeholder="Email"></input>
-      <button>Subscribe</button>
+      <button type="submit">Subscribe</button>
     </div>
   </main>
 );
 
 // JSX element, app
-const app = <div className="app">{main}</div>;
+const app = (
+  <div className="app">
+    <Main />
+  </div>
+);
 
 const rootElement = document.getElementById("root");
 // we render the JSX element using the ReactDOM package
